@@ -5,7 +5,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-header{
+header{    
     display: flex;
     background-color: rgb(70, 64, 64);
     width: 100vw;
@@ -53,6 +53,7 @@ main{
     display: flex;   
     justify-content: center;    
     width: 100vw;
+    height: 100vh;
     
 }
 button{
@@ -83,15 +84,19 @@ button:hover{
     position: relative;
     width: 100vw;
 }
-img{
+main img{
     position: relative;
     width: 100vw;
-    
+    height: 100vh;      
 }
 section{
-    background-color: blackc;
-    display: block;
-    position: relative;
+    background-color: rgb(91, 98, 105, .4);
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    color: azure;
+    margin-top: 10px;
+   
 }
 
 
@@ -125,6 +130,9 @@ section{
         height: 30px;
         background-color: rgb(22, 23, 24, .5);
         box-shadow: inset 0px 0px 20px 1px #69bb069f;
+    }
+    main img{
+        height: 200px;
     }
     
 }
