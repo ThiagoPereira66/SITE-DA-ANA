@@ -1,42 +1,49 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-header{    
+header {
     display: flex;
-    background-color: rgb(70, 64, 64);
+    background: linear-gradient(50deg, rgb(73, 71, 71), rgb(173, 173, 173));
     width: 100vw;
     height: 70px;
     align-items: center;
     justify-content: space-around;
-    
+
 }
 
-.nomeLoja{
+.nomeLoja {
     color: rgb(191 206 219);
-    font-size: 30px;    
+    font-size: 30px;
     text-shadow: 0px 0px 20px rgb(241, 239, 239);
 }
-.destacar{
+
+.destacar {
     color: red;
     font-size: 20px;
 }
 
-header a{
+header a {
     color: white;
     text-decoration: none;
     cursor: pointer;
     margin-right: 50px;
-        
+
 }
-header a:hover{
+
+header a:hover {
     text-shadow: 0px 9px 8px #3ad95c;
 }
 
-.card{
+header img {
+    width: 30px;
+
+}
+
+.card {
     position: relative;
     background-color: rgb(24, 23, 23, .2);
     width: 450px;
@@ -44,19 +51,21 @@ header a:hover{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: inset 0px 0px 7px 2px black; 
-    top:-400px;
-        
+    box-shadow: inset 0px 0px 7px 2px black;
+    top: -400px;
+
 }
-main{   
-    position: relative; 
-    display: flex;   
-    justify-content: center;    
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
-    
+
 }
-button{
+
+button {
     width: 200px;
     height: 40px;
     border: none;
@@ -68,71 +77,138 @@ button{
     margin-top: 40px;
     cursor: pointer;
 }
-button:hover{
+
+button:hover {
     box-shadow: 0px 0px 20px 1px #c9bf6d;
     font-size: 23px;
     text-align: center;
 }
 
-.card h2{
+.card h2 {
     font-size: 38px;
     margin-top: 20px;
     color: white;
 }
 
-.banner{
+.banner {
     position: relative;
     width: 100vw;
 }
-main img{
+
+main img {
     position: relative;
     width: 100vw;
-    height: 100vh;      
+    height: 100vh;
 }
-section{
+
+section {
     background-color: rgb(91, 98, 105, .4);
     height: 70px;
     text-align: center;
     padding-top: 20px;
     color: azure;
     margin-top: 10px;
-   
+
+}
+#menu{
+    display: none;
 }
 
 
 /*para celular*/
 
-@media screen and (max-width: 700px){
-    header a{
-        display: none;
+@media screen and (max-width: 700px) {
+    #menus {
+        display: block;
+        position: absolute;
+        height: 0;
+        transition: .6s;
+        background: brown;
+        z-index: 1000;
+        top: 70px;
+        right: 0;
+        padding: 10px 8px;
+        background: linear-gradient(50deg, rgb(73, 71, 71), rgb(173, 173, 173));
+        visibility: hidden;
+        overflow-y: hidden;
     }
-    .card{
+
+
+    header a {
+        padding-top: 10px;
+        height: 40px;
+        position: relative;
+        display: block;                            
+        border-bottom: solid 1px rgb(73, 71, 71, .3)        
+
+    }
+
+    .card {
         width: 70vw;
         height: 100px;
         top: -160px;
-       
+
     }
-    h2{
+
+    h2 {
         font-size: 32px;
     }
-    main{
+
+    main {
         height: 200px;
     }
-    section{
+
+    section {
         background-color: rgb(91, 98, 105, .4);
         height: 70px;
         text-align: center;
         padding-top: 20px;
         color: azure;
+
     }
-    button{
+
+    button {
         margin-top: 10px;
         height: 30px;
         background-color: rgb(22, 23, 24, .5);
         box-shadow: inset 0px 0px 20px 1px #69bb069f;
     }
-    main img{
+
+    main img {
         height: 200px;
     }
+
+    #menu{
+        display: block;
+    }
+
+    #menus.active {
+        height: calc(45vh - 70px);
+        display: block;
+        visibility: visible;
+        
+    }
+   
+    /* animação do botão menu*/
+    #menu{
+        border-top: 3px solid;
+        width: 30px;
+        color: black;
+        
+    }
+
+    #menu::after, #menu::before{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        background: currentColor;
+        margin-top: 5px;
+       
+    } 
     
+    #menu #menus.active{
+        border-top-color: transparent;
+    }
+
 }
